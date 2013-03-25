@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="mdm.translator_checker.duplicates_detector.class">MDM\TranslatorCheckerBundle\Duplicates\Detector</parameter>
+        <parameter key="mdm.translator.twig.class">MDM\TranslatorCheckerBundle\Twig\Extension\TranslationExtension</parameter>
+        <parameter key="mdm.translator.class">MDM\TranslatorCheckerBundle\Translation\Translator</parameter>
+        <parameter key="mdm.twig.translation.extractor.class">MDM\TranslatorCheckerBundle\Twig\Translation\TwigExtractor</parameter>
+    </parameters>
+
+    <services>
+        <service id="mdm.translator_checker.duplicates_detector" class="%mdm.translator_checker.duplicates_detector.class%">
+            <argument type="service" id="mdm.translator" />
+        </service>
+
+        <service id="mdm.translator.twig" class="%mdm.translator.twig.class%">
+            <tag name="twig.extension"/>
+        </service>
+
+        <service id="mdm.translator" class="%mdm.translator.class%">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="translator.selector" />
+            <argument type="collection" /> <!-- translation loaders -->
+            <argument type="collection">
+                <argument key="cache_dir">%kernel.cache_dir%/translations</argument>
+                <argument key="debug">%kernel.debug%</argument>
+            </argument>
+        </service>
+
+        <service id="mdm.twig.translation.extractor" class="%mdm.twig.translation.extractor.class%">
+            <argument type="service" id="twig" />
+        </service>
+    </services>
+</container>

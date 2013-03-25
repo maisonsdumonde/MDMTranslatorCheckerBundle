@@ -1,0 +1,27 @@
+{
+    "name": "mdm/translator-checker-bundle",
+    "description": "Help you to check all your twig strings was translated - and all your translation keys exists",
+    "require": {
+        "symfony/symfony": "2.2.*",
+        "twig/extensions": "1.0.*@dev",
+        "sensio/framework-extra-bundle": "2.2.*"
+    },
+    "keywords": ["Symfony2", "translator", "bundle"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cedric LOMBARDOT",
+            "email": "cedric.lombardot@gmail.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://github.com/maisonsdumonde/MDMTranslatorCheckerBundle/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "target-dir": "MDM/TranslatorCheckerBundle",
+    "autoload": {
+        "psr-0": { "MDM\\TranslatorCheckerBundle": "" }
+    }
+}
