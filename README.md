@@ -2,6 +2,14 @@
 
 Is a tool to help you fix your translations files.
 
+## Versions
+
+Please use 2.1 branch for Symfony 2.1.* applications : 
+
+````
+composer require mdm/translator-checker-bundle 2.1@dev
+````
+
 ## Usages
 
 ### Add the bundle to your AppKernel
@@ -10,7 +18,7 @@ Is a tool to help you fix your translations files.
 ...
 new MDM\TranslatorCheckerBundle\MDMTranslatorCheckerBundle(),
 ...
-````
+```
 
 ### Detect duplicate of translation values
 
