@@ -4,6 +4,14 @@ Is a tool to help you fix your translations files.
 
 ## Usages
 
+### Add the bundle to your AppKernel
+
+````
+...
+new MDM\TranslatorCheckerBundle\MDMTranslatorCheckerBundle(),
+...
+````
+
 ### Detect duplicate of translation values
 
 Sometimes your files can contains to keys with same values, used the next command to detect them :
