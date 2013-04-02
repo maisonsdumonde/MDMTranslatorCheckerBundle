@@ -10,6 +10,12 @@ Please use 2.1 branch for Symfony 2.1.* applications :
 composer require mdm/translator-checker-bundle 2.1@dev
 ````
 
+And use master branch for Symfony 2.2.* applications : 
+
+````
+composer require mdm/translator-checker-bundle dev-master
+````
+
 ## Usages
 
 ### Add the bundle to your AppKernel
