@@ -2,9 +2,9 @@
     "name": "mdm/translator-checker-bundle",
     "description": "Help you to check all your twig strings was translated - and all your translation keys exists",
     "require": {
-        "symfony/symfony": "2.2.*",
+        "symfony/symfony": "2.3.*",
         "twig/extensions": "1.0.*@dev",
-        "sensio/framework-extra-bundle": "2.2.*"
+        "sensio/framework-extra-bundle": "2.3.*"
     },
     "keywords": ["Symfony2", "translator", "bundle"],
     "type": "symfony-bundle",
