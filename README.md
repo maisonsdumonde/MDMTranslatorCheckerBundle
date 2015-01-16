@@ -10,10 +10,16 @@ Please use 2.1 branch for Symfony 2.1.* applications :
 composer require mdm/translator-checker-bundle 2.1@dev
 ````
 
-And use master branch for Symfony 2.2.* applications : 
+Use master branch for Symfony 2.2.* applications : 
 
 ````
 composer require mdm/translator-checker-bundle dev-master
+````
+
+And use 2.6 branch for Symfony 2.6.* applications : 
+
+````
+composer require mdm/translator-checker-bundle 2.6.*
 ````
 
 ## Usages
